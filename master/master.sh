@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-sed -i -r -e "/[myqsld]/a\server_id=1" /etc/my.cnf
+sed -i -e '2 i\server_id=1' /etc/my.cnf
 /mysql/bin/mysqld_safe --defaults-file=/etc/my.cnf --user=mysql &
 echo "LEE"
 ## create user
